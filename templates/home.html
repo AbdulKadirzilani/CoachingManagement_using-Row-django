@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body style ="background-color:#943126">
+
+<div class="card-body">
+
+    <h1> <u>The coaching management</u>.</h1>
+
+
+        <br>
+        <a class="btn btn-warning" href="{% url 'send-all' %}">Send Mail all Student </a>
+
+        <a class="btn btn-primary" href="{% url 'create-student' %}"> Create New Student </a>
+
+        <a class="btn btn-success" href="list/"> List-All Student </a>
+
+        <a class="btn btn-warning" href="edit/2/"> Edit-Student </a>
+
+
+
+        <a class="btn btn-dark" href="delete/1/"> Delete-Student </a>
+
+
+
+
+</body>
+
+
+
+{% endblock %}

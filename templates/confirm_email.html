@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coaching management</title>
+    <h1> Thanks stay with us</h1>
+</head>
+<body>
+
+{% autoescape off %}
+Hi {{ user.username }},
+Thanks stay with us.
+The Coaching Management,
+http://{{ domain }}{% url 'activate' uid=uid token=token %}
+{% endautoescape %}
+
+
+</body>
+</html>

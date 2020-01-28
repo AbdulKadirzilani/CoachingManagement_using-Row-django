@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i> Student List</div>
+    <div class="card-body">
+
+
+        <table class="table table-responsive-sm table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Birthday</th>
+                    <th>Mobile</th>
+                    <th>E-mail</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+            <tr>
+                <th scope="row"> {{ forloop.counter }} </th>
+                <td> {{ student.name }} </td>
+                <td> {{ student.roll }} </td>
+                <td> {{ student.birthday }} </td>
+                <td> {{ student.mobile }} </td>
+                <td> {{ student.email }} </td>
+
+        <td>
+                    <a class="btn btn-primary" href="{% url 'edit-student' student.id %}">Edit</a>
+
+                    <a class="btn btn-danger" href="{% url 'delete-student' student.id %}">delete</a>
+
+      </td>
+
+            </tr>
+        {% endfor %}
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

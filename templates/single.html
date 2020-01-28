@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Post</title>
+</head>
+<body>
+<!--
+  {% if a.image %}
+            <img src="{{a.image.url}}" class="img-responsive">
+    {% endif %}
+-->
+<!--
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+-->
+
+ {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+
+    <div class="container">
+<table>
+
+
+    <tr><td>
+
+                    <b>  Post title: {{a.title}}</b>
+                    <br>
+                      Post content: {{a.content}}
+                    <br>
+                      Post date: {{a.createdat}}
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+ {% if a.image %}
+            {{a.image}}
+            <img src="{{a.image.url}}" class="img-responsive">
+    {% endif %}
+
+
+</body>
+</html>
+
+</body>
+</html>
